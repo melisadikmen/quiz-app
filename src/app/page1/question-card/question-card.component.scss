@@ -1,0 +1,87 @@
+.count-display {
+    position: relative;
+    left: 20rem;
+}
+
+.container-card {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .example-card {
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        width: 40rem;
+        padding: 12px;
+        -webkit-box-shadow: 0px 0px 46px -9px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 46px -9px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 46px -9px rgba(0, 0, 0, 0.75);
+
+        mat-radio-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .question-sira {
+            position: absolute;
+            top: 1rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            bottom: 7rem;
+
+            button {
+                width: 10rem;
+                top: 8.85rem;
+            }
+        }
+
+    }
+}
+
+.mat-mdc-raised-button.mat-accent {
+    --mdc-protected-button-container-color: #804209;
+}
+
+.mat-mdc-raised-button.mat-primary {
+    --mdc-protected-button-container-color: #d1c599;
+}
+
+.correct-answer {
+    animation: pulse 1s ease-in-out;
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+.score-display {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 4rem;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.score-display.animate {
+    transform: scale(1.5);
+    color: #dcf155;
+}

@@ -1,0 +1,28 @@
+<div class="overall-page">
+    <div class="buttons">
+        <button mat-raised-button (click)="backHome()">Anasayfaya Dön</button>
+        <h1>SONUÇLAR</h1>
+        <button mat-raised-button (click)="backLogin()">Çıkış</button>
+    </div>
+    <div class="cards">
+        @for (user of users; track $index) {
+        <div class="container">
+            <div class="panel">
+                <div class="ring">
+                    <div class="card card1"></div>
+                    <div class="border">
+                        <div class="slide">
+                            <h6 class="para">Kullanıcı adı: {{ user.email }}</h6>
+                            <div class="line">
+                                <h6 class="para">Skor:</h6> <i class="fa fa-plane" aria-hidden="true"></i>
+                                <h6 class="para">{{ user.puan }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+</div>

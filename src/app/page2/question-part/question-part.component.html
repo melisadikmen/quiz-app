@@ -1,0 +1,34 @@
+<div class="score-display" [class.animate]="isAnimating">
+    Skor: {{ puan }}
+</div>
+<div class="count-display">
+    {{counter.min}} : {{counter.sec}}
+</div>
+<div class="container-card">
+    <mat-card class="example-card" [ngClass]="{'correct-answer': isCorrect}">
+        <div class="queu">
+            <p class="question-sira">Soru: {{ currentQuestion.id }} </p>
+        </div>
+        <div class="card-header">
+            <p>{{ currentQuestion.question }}</p>
+        </div>
+        <mat-radio-group [(ngModel)]="selectedOptionId" (change)="onOptionSelected($event.value)">
+            <div class="card-body">
+                <div *ngFor="let option of currentQuestion.option">
+                    <mat-radio-button [value]="option.choice" class="example-radio-button">
+                        {{ option.choice }}
+                    </mat-radio-button>
+                </div>
+            </div>
+        </mat-radio-group>
+        <div class="buttons">
+            <button mat-raised-button color="primary" (click)="lastQuestion()" [disabled]="currentQuestionIndex === 0">
+                Önceki Soru
+            </button>
+            <button mat-raised-button color="accent" (click)="nextQuestion()"
+                [disabled]="currentQuestionIndex === questions.length - 1">
+                Sonraki Soru
+            </button>
+        </div>
+    </mat-card>
+</div>

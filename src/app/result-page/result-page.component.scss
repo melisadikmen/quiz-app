@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    // width: 100vw;
+
+}
+
+.overall-page {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0ead6, #f7d9c4);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    // background: linear-gradient(to bottom left, #4b3832, #3b2f2f, #f0ead6);
+}
+
+.container {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+    height: 270px;
+    width: 190px;
+    position: relative;
+    margin: 0 auto;
+    /* Ortala */
+
+    &:hover {
+        .card {
+            filter: blur(1.5px);
+        }
+
+        .card1 {
+            background-size: 215% 135%;
+        }
+
+
+        .title {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .border {
+            border: 1px solid rgba(255, 255, 255, 1);
+        }
+
+        .slide {
+            bottom: 0px;
+        }
+
+        .ring:before,
+        .ring:after {
+            transform: translateX(-50%) translateY(-50%) rotate(310deg);
+        }
+    }
+}
+
+.ring,
+.card,
+.border,
+.slide,
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ring {
+    color: #fffbf1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 170px;
+}
+
+.card {
+    position: relative;
+    transition: all 1s;
+    height: 270px;
+    width: 190px;
+}
+
+.card1 {
+    background-image: url("./../../assets/Remove-bg.ai_1733866539895.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+}
+
+.ring:before,
+.ring:after {
+    content: "";
+    padding: 0.7em 0.4em;
+    position: absolute;
+    left: 50%;
+    width: 115%;
+    top: 50%;
+    display: block;
+    border: 5px solid #50c9c3;
+    border-radius: 50%;
+    transition: transform 1s;
+    transform: translateX(-50%) translateY(-50%) rotate(50deg);
+}
+
+.ring:before {
+    border-color: rgb(235, 235, 235) rgb(235, 235, 235) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+}
+
+.ring:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgb(235, 235, 235) rgb(235, 235, 235);
+}
+
+.para {
+    bottom: 0;
+    font-size: 16px;
+    font-family: "Raleway";
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.border {
+    position: absolute;
+    height: 260px;
+    width: 180px;
+    transition: border 1s;
+    overflow: hidden;
+}
+
+.slide {
+    height: 260px;
+    width: 180px;
+    position: absolute;
+    border: 1px solid black;
+    bottom: -270px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: bottom 1s;
+    flex-direction: column;
+}
+
+.fa-plane {
+    font-size: 16px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 160px;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+        color: darkgreen;
+
+    }
+
+    h1 {
+        color: darkgreen;
+    }
+}
+
+
+
+.mat-mdc-raised-button:not(:disabled) {
+    background-color: linen;
+}
